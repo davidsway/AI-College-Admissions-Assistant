@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+chromadb
+openai-whisper
+python-multipart
+ollama
