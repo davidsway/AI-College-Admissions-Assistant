@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 升学助手 MVP</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 720px;
+        margin: 2rem auto;
+        line-height: 1.6;
+      }
+      form {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+        padding: 0.5rem;
+        box-sizing: border-box;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AI 升学助手 MVP</h1>
+
+    <h2>添加学生</h2>
+    <form action="/student" method="post">
+      <input name="name" placeholder="姓名" required />
+      <input name="grade" placeholder="年级" required />
+      <input name="target_country" placeholder="目标国家" required />
+      <input name="major" placeholder="目标专业" required />
+      <textarea name="basic_info" placeholder="学生基础信息" required></textarea>
+      <button type="submit">保存学生</button>
+    </form>
+
+    <h2>上传面谈录音</h2>
+    <form action="/interview" method="post" enctype="multipart/form-data">
+      <input name="student_id" placeholder="学生 ID" required />
+      <input name="topic" placeholder="面谈主题" required />
+      <input type="file" name="audio" required />
+      <button type="submit">上传并处理</button>
+    </form>
+  </body>
+</html>
